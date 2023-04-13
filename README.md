@@ -297,6 +297,32 @@ def balanced_str(s):
 print(balanced_str('[{(})}]'))
 
 
+minimum discount problem:
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+prices = [4,9,2,3]
+
+def compute(prices):
+    
+    a =[]
+    sum = 0
+    
+    for i in range(len(prices)):
+        if i == 0:
+            a.append(0)
+        else :
+           t = max(prices[i]-prices[i-1],0)
+           a.append(t)
+           sum = sum + t
+    sum = sum + prices[0]
+    return(sum)
+    
+    
+    
+print(compute(prices))
+
+
 
 
 
