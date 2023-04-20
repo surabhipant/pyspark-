@@ -323,6 +323,34 @@ def compute(prices):
 print(compute(prices))
 
 
+###########implement a doublly linked list##########
+The code is as follows:
+comitted in 20th Apr,2023.
+####################################################
+ def __init__(self,value):
+        self.value = value 
+        self.next_value = None 
+        self.prev_value = None
+        
+
+
+a = Node(1)
+b = Node(2)
+c = Node(3)
+
+a.next_value = b
+b.prev_value = a
+b.next_value = c
+c.prev_value = b
+
+print(a.value)
+print(a.next_value.value)
+print(b.next_value.value)
+print(b.prev_value.value)
+        
+    
+    
+
 
 
 
