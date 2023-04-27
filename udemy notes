@@ -1,0 +1,158 @@
+Quick key to be thought of :
+
+(3)
+(4) -- clear concepts 
+(7) -- no idea 
+(9) -- revise to the core as its very imp 
+(10) requires a depper understanding 
+(13) it shd be on ur tips as to how many tabs are ther ein spark UI along with why other questions are in corrrect.
+(14) why broadcast with serialized is not working as an option reason must be claer 
+(15) note , when to inc /dec what, conecpt shd be clear 
+(17) plain revision will help 
+(18) slight revision for choosing better between options
+(20)a cursory revision will help 
+(21) slight revision if its incorrect 
+(22) reread to revise deeper 
+(23) why one other option is incorrect 
+(24) read if collect and head are able to produe a python list as collect mostly does not take a param 
+(26) must revise 
+(27) check how filter and where takes args, ie vvimpm 
+(28) read the key to filter option , check if path in write data frame is valid etc etc 
+(29) read array_contains 
+(32) revise multiple times 
+(33) slight revision 
+(34) slight revision 
+(37) why with negtion the answer is incorrect 
+(38) revise deeply 
+(39) read about the function 
+(40) remember the syntax with chain of columns 
+(41) revise deeply to avoid confusions 
+(42) extremely confusing as to how chaining occurs for and / &
+(43) order by and sort differences 
+(44) good to revise 
+(45) must revise 
+(46) see split syntax 
+(47) size of when to use , length of when to use 
+(48) plian revise 
+(52) super confusing 
+(53) revise once 
+(55) revise for negation 
+(56) slight revision 
+(60) triple reviison 
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+the total incorrect ones:
+
+(7) collect never takes any arguments, toLocalItearator takes only bollena expression so 5 as an argument will not work there.
+take(5)or head(5) is correct but for head rest params is not correct like syntax 
+
+this will give a python list even as an output 
+
+
+df.filter(col("storeId")==25).take(5)
+
+
+the expression bollean gives a hint that select should be used instead of filter and where. That's why 
+here when we are tryig to sleect the thg swith chain operator: follwoeing wd be the syntax 
+
+df.select((col("st_d").between(20.30) & (col(prd_id))==2)) -- we can chain the thgs with an & operator 
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$444
+
+udemy test 2 keys to consider 
+(3) read thoroughly 
+(4) not sure between options 
+(6) revise 
+(8) option D is not clear as to what exactly its saying 
+(9) revise 
+(11) revise as well 
+(17)revise 
+(13) revise 
+(18) revise 
+(20) NO idea at all 
+(21) chaining is not clear 
+22) why others r incorrect is not clear 
+23) read other options to check teh elimination process 
+24)read explanation properly 
+25)disk_storage_2 shd understand 
+28) slight revision 
+29) definitely revise 
+31) must revise 
+32) revise the function sort_array in detail with different options 
+35) revise 10 times on riority 
+38) doubt between opt 1 and opt 4 very imp 
+39) type by urself and read for incorrect options explannation 
+41) revise 
+42) avg revise once and try writing 
+44) check the correct code 
+46) revise deeply 
+47) revise again 
+49) extremely confusing 
+50) fact about compression , i think its auto picked up .gz is the case if 
+51) read size verses length and regex_replace 
+53) why 4th is incorrect 
+56) learn abt negation 
+57) very imp to revise 
+60)MIMP 
+
+ 
+ 
+ 
+ surabhip1991
+ 
+ 
+ 
+ 
+ List of the questions from skill Pro certification:
+ 
+ 22) isnull function takes only a single arg, it ever takes 2. plus expr usage tells that its a sql syntax, we dont have lit in pyspark, if we want to pass 
+ 2 args then ifnull shd be teh correct choice.
+ 
+ if u want to split the dataframes, they r like below:
+ df1, df2 = df.randomSplit([0.70,0.30]) ---randomSplit functio will always take teh fractios within the iist.
+ 
+
+ 
+ 
+24) df.randomSplit, will accept fractions as arguments.
+25)newSchema = mySchema.add("department", stringType())
+
+26) spark.catalog.uncacheTable("My_table")
+we can also ncache table with spark sql 
+spark.sql("uncache table table_Name")
+ 
+spark.catalog.uncacheTable("MY_TABLE")
+27) there is no path method whie writing the datframe /u can skip the default format ie paraquet.
+28) the save mode configuration options are :
+overwrite 
+append 
+error
+
+there is no ignore  mode here 
+
+(30) Spark only mnages the metadata of the table, u manage the data urself . Treat unmanaged as external tables and since teh dat afr managed resides in HDFS
+     Spark does not manage the data at all.
+
+u cache or persist, df is not fully cached until u invoke an action that goe sthru evry record. If u use an action.
+
+35) data on disk is always serialized either using java or kryo serialization.
+36) spark has both managed and exteral tables the moment u add the option path in teh datframe wrier, it becomes an exterbal table 
+
+
+spark.read.format("csv").option("inferSchema", True").option("header", True").option("sep",'').load("/../...txt)
+
+we can use csv file format  to read text files even.
+
+38) inferSchema method ofetn infers date data type as string.
+
+
+func_udf = udf(function_name)
+to enable the udfs to be used from expr ie sql usage, it needs to be registerd as a sql function 
+spark.udf.register("")
+ 
+We can create dataframes of dataframes, but the condition is to refer to the fields as df.lname, df.fname etc 
+
+ 
+ 
+ 
+ 
